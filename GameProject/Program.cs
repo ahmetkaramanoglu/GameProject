@@ -1,4 +1,5 @@
-﻿using GameProject.Concrete;
+﻿using GameProject.Concreate;
+using GameProject.Concrete;
 using GameProject.Entity;
 using System;
 
@@ -30,7 +31,7 @@ namespace GameProject
             };
             GameManager gameManager = new GameManager();
             gameManager.Add(game);
-            OyuncuManager oyuncuManager = new OyuncuManager();
+            GamerManager oyuncuManager = new GamerManager(new UserValidationManager());
             oyuncuManager.Add(gamer);
             SalesManager salesManager = new SalesManager();
             salesManager.Buy(game, gamer);
